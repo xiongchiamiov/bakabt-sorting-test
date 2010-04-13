@@ -222,7 +222,8 @@ $(document).ready(function() {
 			4: { sorter: 'filesize' },
 			5: { sorter: 'filesize' },
 			6: { sorter: 'ratio' }
-		}
+		},
+		sortList: [[1, 0]]
 	});
 	
 	$("table.torrents").bind("sortEnd", function() {
