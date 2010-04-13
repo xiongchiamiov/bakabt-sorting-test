@@ -133,7 +133,6 @@ $.tablesorter.addParser({
 	format: function(s) {
 		// format your data for normalization
 		var match = $('.title', s).html();
-		console.log('name: '+match);
 		return match;
 	},
 	// set type, either numeric or text
@@ -148,7 +147,6 @@ $.tablesorter.addParser({
 		// if we don't have a top-level element, jQuery can't parse the dom very well
 		s = '<div>'+s+'</div>';
 		var match = $('a', s).html();
-		console.log('peers: '+match);
 		return match;
 	},
 	type: 'numeric'
@@ -170,7 +168,6 @@ $.tablesorter.addParser({
 			var number = number * 1024;
 		}
 		
-		console.log('filesize: '+number);
 		return number;
 	},
 	type: 'numeric'
@@ -182,14 +179,12 @@ $.tablesorter.addParser({
 	},
 	format: function(s) {
 		var match = (s == 'Inf.') ? Number.POSITIVE_INFINITY : s;
-		console.log('ratio: '+match);
 		return match;
 	},
 	type: 'numeric'
 });
 $(document).ready(function() {
 	$("table.torrents").tablesorter({
-		debug: true,
 		headers: {
 			1: { sorter: 'name' },
 			2: { sorter: 'peers' },
