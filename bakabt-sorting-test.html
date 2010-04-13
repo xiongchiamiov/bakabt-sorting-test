@@ -199,7 +199,18 @@ $(document).ready(function() {
 			6: { sorter: 'ratio' }
 		}
 	});
+	
+	$("table.torrents").bind("sortEnd", function() {
+		fix_table_colors('table.torrents');
+	});
 });
+
+function fix_table_colors(identifier) {
+	var rows = $(identifier + ' tbody tr');
+	for (var i = 0; i < rows.length; i++) {
+		$(rows[i]).attr('class', 'alt'+(i%2));
+	}
+};
 </script>
 
 </body></html>
