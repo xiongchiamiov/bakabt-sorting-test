@@ -42,7 +42,7 @@
 		</td>
 						<td class="name">
 			<div class="tb_149892">
-				<a class="title sort-data" href="http://www.bakabt.com/149892-aozora-shoujotai-801-t-t-s-airbats-h264-e-d.html">Aozora Shoujotai | 801 T.T.S. Airbats [H264] [E-D]</a>
+				<a class="title sort-data" href="http://www.bakabt.com/149892-aozora-shoujotai-801-t-t-s-airbats-h264-e-d.html">aozora Shoujotai | 801 T.T.S. Airbats [H264] [E-D]</a>
 			<img src="files/pixel.gif" class="icon multi" alt="Multiaudio" title="Multiaudio"><img src="files/pixel.gif" class="icon bonusbig" alt="Bonus" title="Bonus">				<a href="http://www.bakabt.com/edit.php?id=149892"><img class="icon torrent_edit" src="files/pixel.gif" alt="Edit Torrent Info" title="Edit Torrent Info"></a>
 				<a href="http://www.bakabt.com/sandbox.php?id=149892"><img class="icon torrent_description" src="files/pixel.gif" alt="Edit Torrent Description" title="Edit Torrent Description"></a>
 							</div>
@@ -166,7 +166,7 @@ $.tablesorter.addParser({
 	format: function(s) {
 		// format your data for normalization
 		var match = $('.title', s).html();
-		return match;
+		return match.toLocaleLowerCase();
 	},
 	// set type, either numeric or text
 	type: 'text'
