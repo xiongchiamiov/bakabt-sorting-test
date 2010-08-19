@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 
 	<title>BakaBT - Anime - Bittorrent - Download - Public Tracker</title>
 	<script type="text/Javascript" src="files/jquery.js"></script>
@@ -53,7 +53,7 @@
 						<td class="size"><span class="sort-data">2.35 GB</span></td>
 						<td class="transfer_up"><span class="sort-data">38 MB</span></td>
 						<td class="transfer_down"><span class="sort-data">0 KB</span></td>
-						<td class="ratio"><span style="color: rgb(255, 0, 0);" class="sort-data">Inf.</span><sup>0x</sup></td>
+						<td class="ratio"><span style="color: rgb(255, 0, 0);" class="sort-data">∞</span><sup>0x</sup></td>
 					</tr>
 
 	<tr class="alt1">
@@ -114,7 +114,7 @@
 						<td class="size"><span class="sort-data">702 MB</span></td>
 						<td class="transfer_up"><span class="sort-data">4.28 GB</span></td>
 						<td class="transfer_down"><span class="sort-data">0 KB</span></td>
-						<td class="ratio"><span style="color: rgb(255, 0, 0);" class="sort-data">Inf.</span><sup>6.2x</sup></td>
+						<td class="ratio"><span style="color: rgb(255, 0, 0);" class="sort-data">∞</span><sup>6.2x</sup></td>
 					</tr>
 	<tr class="alt0">
 		<td class="category">
@@ -211,7 +211,7 @@ $.tablesorter.addParser({
 		return false;
 	},
 	format: function(s) {
-		var match = (s == 'Inf.') ? Number.POSITIVE_INFINITY : s;
+		var match = (s == '∞') ? Number.POSITIVE_INFINITY : s;
 		return match;
 	},
 	type: 'numeric'
