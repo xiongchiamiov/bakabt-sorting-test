@@ -210,6 +210,8 @@ $.tablesorter.addParser({
 		return false;
 	},
 	format: function(s) {
+		s = '<div>'+s+'</div>';
+		s = $(s).children()[0].innerHTML;
 		var match = (s == '∞') ? Number.POSITIVE_INFINITY : s;
 		return match;
 	},
@@ -226,7 +228,7 @@ $(document).ready(function() {
 			5: { sorter: 'filesize' },
 			6: { sorter: 'ratio' }
 		},
-		textExtraction: function(node) { return node; },
+		textExtraction: function(node) { return node.innerHTML; }, // turn off "smart" extraction, since it behaves differently in IE
 		sortList: [[1, 0]]
 	});
 	
