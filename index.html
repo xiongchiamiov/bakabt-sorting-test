@@ -151,6 +151,8 @@ $.tablesorter.addParser({
 		return false;
 	},
 	format: function(s) {
+		// if we don't have a top-level element, jQuery can't parse the dom very well
+		s = '<div>'+s+'</div>';
 		var match = $('img', s).attr('alt');
 		return match;
 	},
@@ -164,6 +166,7 @@ $.tablesorter.addParser({
 		return false;
 	},
 	format: function(s) {
+		s = '<div>'+s+'</div>';
 		// format your data for normalization
 		var match = $('.title', s).html();
 		return match.toLocaleLowerCase();
@@ -177,7 +180,6 @@ $.tablesorter.addParser({
 		return false;
 	},
 	format: function(s) {
-		// if we don't have a top-level element, jQuery can't parse the dom very well
 		s = '<div>'+s+'</div>';
 		var match = $('a', s).html();
 		return match;
@@ -231,6 +233,9 @@ $(document).ready(function() {
 	});
 	
 	$("table.torrents").bind("sortEnd", function() {
+		// So, this will "fix" the colors on every table,
+		// even though we only need to fix one.
+		// This is a bit of a Bad Thing.
 		fix_table_colors('table.torrents');
 	});
 });
